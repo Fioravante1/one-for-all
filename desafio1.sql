@@ -29,3 +29,10 @@ CREATE TABLE musicas(
   nome_musica VARCHAR(50) NOT NULL,
   FOREIGN KEY (album_id) REFERENCES albuns(album_id)
 ) engine = InnoDB;
+CREATE TABLE historico(
+  usuario_id INT NOT NULL,
+  musica_id INT NOT NULL,
+  FOREIGN KEY(usuario_id) REFERENCES usuarios(usuario_id),
+  FOREIGN KEY(musica_id) REFERENCES musicas(musica_id),
+  CONSTRAINT PRIMARY KEY(usuario_id, musica_id)
+) engine = InnoDB;
