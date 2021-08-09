@@ -60,9 +60,9 @@ INSERT INTO
   artistas (nome_artista)
 VALUES
   ('Walter Phoenix'),
-  ('Freedie Shannon'),
+  ('Peter Strong'),
   ('Lance Day'),
-  ('Peter Strong');
+  ('Freedie Shannon');
 INSERT INTO
   albuns (nome_album, artista_id)
 VALUES
