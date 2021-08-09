@@ -6,7 +6,7 @@ FROM
   artistas AS a
   INNER JOIN seguindo_artista AS ui ON a.artista_id = ui.artista_id
 GROUP BY
-  a.artista_id
+  a.artistas
 ORDER BY
   seguidores DESC,
   artista
