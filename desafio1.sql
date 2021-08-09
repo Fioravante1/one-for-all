@@ -13,3 +13,7 @@ CREATE TABLE usuarios(
   plano_id INT NOT NULL,
   FOREIGN KEY (plano_id) REFERENCES planos (plano_id)
 ) engine = InnoDB;
+CREATE TABLE artistas(
+  artista_id INT PRIMARY KEY AUTO_INCREMENT,
+  nome_artista VARCHAR(50) NOT NULL
+) engine = InnoDB
