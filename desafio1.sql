@@ -23,3 +23,9 @@ CREATE TABLE albuns(
   artista_id INT NOT NULL,
   FOREIGN KEY (artista_id) REFERENCES artistas(artista_id)
 ) engine = InnoDB;
+CREATE TABLE musicas(
+  musica_id INT PRIMARY KEY AUTO_INCREMENT,
+  album_id INT NOT NULL,
+  nome_musica VARCHAR(50) NOT NULL,
+  FOREIGN KEY (album_id) REFERENCES albuns(album_id)
+) engine = InnoDB;
