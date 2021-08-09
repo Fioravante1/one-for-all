@@ -34,14 +34,14 @@ CREATE TABLE historico(
   musica_id INT NOT NULL,
   FOREIGN KEY(usuario_id) REFERENCES usuarios(usuario_id),
   FOREIGN KEY(musica_id) REFERENCES musicas(musica_id),
-  CONSTRAINT PRIMARY KEY(usuario_id, musica_id)
+  PRIMARY KEY(usuario_id, musica_id)
 ) engine = InnoDB;
 CREATE TABLE seguindo_artista(
   usuario_id INT NOT NULL,
   artista_id INT NOT NULL,
   FOREIGN KEY(usuario_id) REFERENCES usuarios(usuario_id),
   FOREIGN KEY(artista_id) REFERENCES artistas(artista_id),
-  CONSTRAINT PRIMARY KEY(usuario_id, artista_id)
+  PRIMARY KEY(usuario_id, artista_id)
 ) engine = InnoDB;
 INSERT INTO
   planos (tipo_plano, plano_valor)
@@ -50,7 +50,7 @@ VALUES
   ('universitário', 5.99),
   ('familiar', 7.99);
 INSERT INTO
-  usuarios (usuario, idade, plano_id)
+  usuarios (nome, idade, plano_id)
 VALUES
   ('Thati', 23, 1),
   ('Cintia', 35, 3),
