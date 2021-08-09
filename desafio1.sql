@@ -16,4 +16,10 @@ CREATE TABLE usuarios(
 CREATE TABLE artistas(
   artista_id INT PRIMARY KEY AUTO_INCREMENT,
   nome_artista VARCHAR(50) NOT NULL
-) engine = InnoDB
+) engine = InnoDB;
+CREATE TABLE albuns(
+  album_id INT PRIMARY KEY AUTO_INCREMENT,
+  nome_album VARCHAR(50) NOT NULL,
+  artista_id INT NOT NULL,
+  FOREIGN KEY (artista_id) REFERENCES artistas(artista_id)
+) engine = InnoDB;
