@@ -7,5 +7,3 @@ DELETE FROM seguindo_artista WHERE usuario_id = OLD.usuario_id;
 DELETE FROM historico WHERE usuario_id = OLD.usuario_id;
 END $$
 DELIMITER ;
-
-
