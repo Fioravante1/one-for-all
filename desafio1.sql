@@ -56,3 +56,10 @@ VALUES
   ('Cintia', 35, 3),
   ('Bill', 20, 2),
   ('Roger', 45, 1);
+INSERT INTO
+  artistas (nome_artista)
+VALUES
+  ('Walter Phoenix'),
+  ('Freedie Shannon'),
+  ('Lance Day'),
+  ('Peter Strong');
