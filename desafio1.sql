@@ -42,4 +42,17 @@ CREATE TABLE seguindo_artista(
   FOREIGN KEY(usuario_id) REFERENCES usuarios(usuario_id),
   FOREIGN KEY(artista_id) REFERENCES artistas(artista_id),
   CONSTRAINT PRIMARY KEY(usuario_id, artista_id)
-);
+) engine = InnoDB;
+INSERT INTO
+  planos (tipo_plano, plano_valor)
+VALUES
+  ('gratuito', 0.00),
+  ('universitário', 5.99),
+  ('familiar', 7.99);
+INSERT INTO
+  usuarios (usuario, idade, plano_id)
+VALUES
+  ('Thati', 23, 1),
+  ('Cintia', 35, 3),
+  ('Bill', 20, 2),
+  ('Roger', 45, 1);
